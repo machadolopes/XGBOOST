@@ -1,0 +1,17 @@
+﻿item,valor
+Dataset: n processos,3 498 973
+Dataset: censura,17.48 % (611 509 / 3 498 973)
+Dataset: evento,primeira baixa TPU 22
+Dataset: janela,"ajuizamentos 2015–2025, TRF2, todos os graus"
+Dataset: classes,16 (top 95 % + Outras classes)
+Dataset: órgãos,337
+Algoritmo,XGBoost Survival AFT (único algoritmo estimado)
+Distribuição AFT (Tabela 9),normal; σ = 0.963
+C-index teste / treino,0.760 / 0.760
+IBS AFT / IBS KM,0.126 / 0.194
+Brier 6m / 1a / 2a / 3a / 5a,0.119 / 0.164 / 0.158 / 0.133 / 0.077
+Gain relativo órgão / classe / ano,0.705 / 0.213 / 0.082
+|SHAP| médio relativo órgão / classe / ano,0.662 / 0.129 / 0.209
+"S(2 anos) extremos (medianas de classe, teste)",mín 0.001 (Carta Precatória Cível) · máx 0.802 (Execução Fiscal)
+Anomalias rácio ≥ 2 (2022),19
+Semente,42

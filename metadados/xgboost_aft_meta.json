@@ -1,0 +1,38 @@
+{
+  "algoritmo": "xgboost_survival_aft",
+  "distribuicao": "normal",
+  "sigma": 0.9627630418491501,
+  "sigma_treino_inicial": 1.0,
+  "n_arvores": 500,
+  "c_index_treino": 0.7596855687154176,
+  "c_index_teste": 0.7603072712802313,
+  "ibs": 0.12622035212933305,
+  "ibs_km": 0.19444612958385152,
+  "seed": 42,
+  "covariaveis": [
+    "classe_processual",
+    "orgao_julgador",
+    "ano_ajuizamento"
+  ],
+  "n_features": 361,
+  "n_treino": 2799178,
+  "n_teste": 699795,
+  "n_avaliacao_teste": 80000,
+  "hiperparametros": {
+    "objective": "survival:aft",
+    "eval_metric": "aft-nloglik",
+    "aft_loss_distribution_scale": 1.0,
+    "tree_method": "hist",
+    "max_depth": 6,
+    "eta": 0.05,
+    "min_child_weight": 10,
+    "seed": 42,
+    "verbosity": 0,
+    "aft_loss_distribution": "normal"
+  },
+  "xgboost_versao": "3.4.1",
+  "anos_treino": [
+    2015,
+    2025
+  ]
+}
