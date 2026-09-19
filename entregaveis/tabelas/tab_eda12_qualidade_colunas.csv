@@ -1,0 +1,18 @@
+﻿coluna,pct_missing,n_missing,n_distintos,dtype
+processo_id,0.0,0,3498973,str
+id,0.0,0,3498973,str
+numeroProcesso,0.0,0,2913490,str
+tribunal,0.0,0,1,str
+grau,0.0,0,5,str
+data_ajuizamento,0.0,0,3200001,"datetime64[us, UTC]"
+data_termino,17.477,611509,2524672,"datetime64[us, UTC]"
+tempo,0.0,0,3398847,float64
+evento,0.0,0,2,int8
+ano_ajuizamento,0.0,0,11,int64
+classe_processual_codigo,0.0,0,16,int64
+classe_processual,0.0,0,16,str
+orgao_julgador_codigo,0.0,0,343,int64
+orgao_julgador,0.0,0,337,str
+n_movimentos,0.0,0,150,int64
+n_documentos_datajud,0.0,0,8,int64
+faixa_t,0.0,0,6,category

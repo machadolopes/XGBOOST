@@ -1,0 +1,4 @@
+﻿distribuicao,C_index_treino,C_index_teste,IBS,IBS_KM,sigma_calibrado,n_arvores,tempo_treino_min,score_C_menos_IBS,seleccionada
+normal,0.76,0.76,0.126,0.194,0.963,500,1.41,0.634,sim
+logistic,0.582,0.583,0.313,0.194,2.083,500,0.1,0.27,não
+extreme,0.754,0.754,0.128,0.194,0.802,500,1.33,0.626,não

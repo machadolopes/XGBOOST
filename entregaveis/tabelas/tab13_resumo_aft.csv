@@ -1,0 +1,11 @@
+﻿metrica,valor
+Distribuição AFT,normal
+σ calibrado,0.963
+Árvores (early stopping),500
+C-index treino,0.760
+C-index teste,0.760
+IBS (AFT),0.126
+"IBS (KM, referência)",0.194
+Tempo de treino (min),1.41
+n treino+val / n teste,"2,799,178 / 699,795"
+n avaliação (subamostra teste),"80,000"

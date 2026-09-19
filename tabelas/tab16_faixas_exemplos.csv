@@ -1,0 +1,21 @@
+﻿processo_id,classe,orgao,ano,t_previsto_d,faixa,percentis
+51103064420214025101,Cumprimento de sentença,9º Juizado Especial Federal do R,2021,389.0,Muito rápido,classe×ano
+50031130720214025121,Procedimento do Juizado Especial Cív,Centro de Solução de Conflitos e,2021,232.0,Muito rápido,classe×ano
+50133763620224025001,Execução Fiscal,3ª Vara de Execução Fiscal de Vi,2022,1171.0,Muito rápido,classe×ano
+50017867020204025118,Apelação / Remessa Necessária,GABINETE 02,2023,342.0,Muito rápido,classe×ano
+00210956720164025001,Execução Fiscal,2ª Vara de Execução Fiscal de Vi,2016,3304.0,Rápido,classe×ano
+50088814320244020000,Agravo de Instrumento,GABINETE 15,2024,213.0,Rápido,classe×ano
+50168131920234020000,Agravo de Instrumento,GABINETE 15,2023,251.0,Rápido,classe×ano
+50169300920184025101,Procedimento do Juizado Especial Cív,1ª Vara Federal do Rio de Janeir,2018,339.0,Rápido,classe×ano
+50074224020214025002,Recurso Inominado Cível,1ª Turma Recursal - Juiz Relator,2023,165.0,Típico,classe×ano
+50036850320244025106,Cumprimento de sentença,2ª Vara Federal de Petrópolis,2024,414.0,Típico,classe×ano
+50020072320194025107,Outras classes,Diretoria de Itaboraí,2019,297.0,Típico,classe×ano
+50126202520214025110,Procedimento do Juizado Especial Cív,5ª Vara Federal de São João de M,2021,621.0,Típico,classe×ano
+50025078020194025110,Execução Fiscal,2ª Vara de Execução Fiscal de Sã,2019,2038.0,Lento,classe×ano
+50389015420214025001,Cumprimento de Sentença contra a Faz,2ª Vara Federal de Vitória,2021,770.0,Lento,classe×ano
+50121287220224025118,Recurso Inominado Cível,4ª Turma Recursal - Juiz Relator,2023,399.0,Lento,classe×ano
+01245724320154025001,Outras classes,4ª Vara Federal de Vitória,2015,1765.0,Lento,classe×ano
+50976883820194025101,Recurso Inominado Cível,Gabinete do Juízo Gestor das Tur,2020,544.0,Muito lento,classe×ano
+50042325420214025104,Procedimento do Juizado Especial Cív,1ª Vara Federal de Volta Redonda,2021,1033.0,Muito lento,classe×ano
+50155140320234025110,Procedimento do Juizado Especial Cív,6ª Vara Federal de São João de M,2023,512.0,Muito lento,classe×ano
+50006479520204025114,Procedimento do Juizado Especial Cív,Vara Federal de Magé,2020,466.0,Muito lento,classe×ano

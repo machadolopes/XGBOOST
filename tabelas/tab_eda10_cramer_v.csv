@@ -1,0 +1,4 @@
+﻿par,Cramers_V,chi2,gl,p
+classe_processual × orgao_julgador,0.538,15173844.4,5040,< .001
+classe_processual × ano_ajuizamento,0.127,564314.4,150,< .001
+orgao_julgador × ano_ajuizamento,0.159,885322.1,3360,< .001

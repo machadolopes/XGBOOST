@@ -1,0 +1,6 @@
+﻿passo,n_antes,n_depois,n_removidos,pct_removidos,justificacao
+agregar_processo_id,3522000,3501001,20999,0.596,Unidade de análise = tribunal + grau + numeroProcesso. 18212 chaves tinham mais do que um documento DataJud (redistribuição ou mudança de classe); retém-se a capa no ajuizamento e a primeira baixa TPU 22.
+datas_ajuizamento_invalidas,3501001,3501001,0,0.0,Impossível calcular o tempo de tramitação sem data de ajuizamento válida.
+covariaveis_em_falta,3501001,3501001,0,0.0,O XGBoost AFT exige classe processual e órgão julgador observados no ajuizamento.
+tempo_nao_positivo,3501001,3498973,2028,0.058,Tempos ≤ 0 resultam de datas invertidas ou do mesmo instante (erro de registo).
+ano_ajuizamento_em_falta,3498973,3498973,0,0.0,O ano de ajuizamento é covariável da dissertação (painéis anuais).

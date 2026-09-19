@@ -1,18 +1,9 @@
-# Extrações DataJud e artefactos pesados
-data/raw/*.parquet
-data/processed/*.parquet
+# Extração DataJud em curso (não versionar partes incompletas)
 data/parts/
 data/checkpoints/
-dados/*.parquet
-modelo/*.json
-modelo/*.joblib
-figuras/*.png
-tabelas/*.csv
-tabelas/*.png
-entregaveis/figuras/
-entregaveis/tabelas/
+data/processed/
 
-# Python
+# Python / ambiente local
 .venv/
 venv/
 __pycache__/
