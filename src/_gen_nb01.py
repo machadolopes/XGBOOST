@@ -74,6 +74,10 @@ from src.data_utils import (
     project_root,
     raw_data_dir,
 )
+import importlib
+import src.eda_utils as _eda_utils
+importlib.reload(_eda_utils)
+from src.eda_utils import percentagens_que_somam_100
 import pyarrow.parquet as pq
 
 setup_apa_style()
@@ -220,7 +224,7 @@ tab1 = pd.DataFrame(
     {
         "classe_processual": freq.index,
         "frequencia": freq.values,
-        "percentagem": (100 * freq.values / freq.sum()).round(2),
+        "percentagem": percentagens_que_somam_100(freq.values),
     }
 )
 tab1["percentagem_acumulada"] = tab1["percentagem"].cumsum().round(2)
@@ -228,7 +232,8 @@ exportar_tabela_apa(
     tab1,
     1,
     "Distribuição das classes processuais na amostra analítica (top 95% e residual agregado)",
-    "Percentagens com duas casas decimais. «Outras classes» é a agregação do residual (~5%), não uma classe TPU.",
+    "Percentagens a duas casas pelo método dos maiores restos, para o total ser 100,00 %. "
+    "«Outras classes» é a agregação do residual (~5%), não uma classe TPU.",
     DIR_TAB,
     "tab01_descritiva_classes",
 )

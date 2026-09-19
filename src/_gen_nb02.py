@@ -63,12 +63,16 @@ from src.apa_style import (
     setup_apa_style,
 )
 from src.data_utils import project_root
+import importlib
+import src.eda_utils as _eda_utils
+importlib.reload(_eda_utils)
 from src.eda_utils import (
     classificar_faixa_tempo,
     classes_por_volume,
     cramers_v,
     encoding_frequencia,
     ic_mediana,
+    percentagens_que_somam_100,
 )
 
 setup_apa_style()
@@ -146,11 +150,13 @@ exportar_tabela_apa(tab_eda1, "EDA-1", "Percentis do tempo até ao término (pro
 freq = df["classe_processual"].value_counts()
 tab_eda2 = pd.DataFrame({
     "classe_processual": freq.index, "n": freq.values,
-    "percentagem": (100 * freq.values / freq.sum()).round(2),
+    "percentagem": percentagens_que_somam_100(freq.values),
 })
 tab_eda2["percentagem_acumulada"] = tab_eda2["percentagem"].cumsum().round(2)
 exportar_tabela_apa(tab_eda2, "EDA-2", "Frequência das classes processuais (após agregação do residual)",
-    "«Outras classes» é o residual do corte de Pareto a 95% (Notebook 1).", DIR_TAB, "tab_eda02_classes_completa")
+    "«Outras classes» é o residual do corte de Pareto a 95% (Notebook 1). "
+    "Percentagens a duas casas pelo método dos maiores restos, para o total ser 100,00 %.",
+    DIR_TAB, "tab_eda02_classes_completa")
 
 fig, ax = plt.subplots(figsize=(8, 7))
 ord_ = list(reversed(CLASSES_95))

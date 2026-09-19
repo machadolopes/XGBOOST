@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-from scipy.stats import chi2_contingency
 
 FAIXAS_TEMPO_DIAS = [
     ("0–6 meses", 0, 182),
@@ -18,6 +17,8 @@ FAIXAS_TEMPO_DIAS = [
 
 def cramers_v(x: pd.Series, y: pd.Series) -> tuple[float, float, int, float]:
     """Cramér's V, estatística qui-quadrado, graus de liberdade e p-valor."""
+    from scipy.stats import chi2_contingency
+
     ct = pd.crosstab(x, y)
     chi2, p, gl, _ = chi2_contingency(ct)
     n = ct.to_numpy().sum()
@@ -62,3 +63,34 @@ def encoding_frequencia(serie: pd.Series) -> pd.Series:
     """Substitui cada categoria pela respectiva frequência relativa."""
     freq = serie.value_counts(normalize=True)
     return serie.map(freq).astype(float)
+
+
+def percentagens_que_somam_100(contagens, casas: int = 2) -> np.ndarray:
+    """Percentagens com `casas` decimais cuja soma é exactamente 100.
+
+    Usa o método dos maiores restos (Hamilton): evita que o arredondamento
+    independente de cada linha produza 99,99 % ou 100,01 %.
+    """
+    n = np.asarray(contagens, dtype=np.int64)
+    total = int(n.sum())
+    if total == 0 or n.size == 0:
+        return np.zeros(n.shape, dtype=float)
+    factor = 10**casas
+    quota = 100 * factor
+    numerador = n.astype(object) * quota
+    quociente = np.array([int(x // total) for x in numerador], dtype=np.int64)
+    restos = np.array([int(x % total) for x in numerador], dtype=np.int64)
+    falta = quota - int(quociente.sum())
+    if falta > 0:
+        ordem = np.argsort(-restos, kind="mergesort")
+        quociente[ordem[:falta]] += 1
+    elif falta < 0:
+        ordem = np.argsort(restos, kind="mergesort")
+        removidos = 0
+        for idx in ordem:
+            if removidos >= -falta:
+                break
+            if quociente[idx] > 0:
+                quociente[idx] -= 1
+                removidos += 1
+    return quociente / float(factor)
